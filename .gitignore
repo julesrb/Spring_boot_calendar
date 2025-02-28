@@ -1,0 +1,8 @@
+# Ignore Visual Studio Code folder
+.vscode/
+
+# Ignore JetBrains IDEs folder (e.g., IntelliJ IDEA, PyCharm)
+.idea/
+
+# Ignore macOS system files
+.DS_Store
