@@ -1,30 +1,21 @@
-package BackendCalendarEvents.event;
+package BackendCalendarEvents.controller;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import BackendCalendarEvents.entity.Event;
 
 import java.time.LocalDate;
 
-public class Event  {
-//     private int id;
+public class EventDTO {
     private String message;
-    @NotBlank
     private String event;
-    @NotNull
     private LocalDate date;
-//    private Date EndDate;
-//    private String Description;
 
-    public Event() {}
+    EventDTO(Event eventEntity) {
+        this.date = eventEntity.getDate();
+        this.event = eventEntity.getEvent();
+    }
 
     public void addedSuccessfully() {
         setMessage("The event has been added!");
-    }
-
-    public Event(String event, LocalDate date) {
-        this.event = event;
-        this.date = date;
     }
 
     public String getEvent() {
